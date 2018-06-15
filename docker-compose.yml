@@ -1,0 +1,29 @@
+version: '3.4'
+
+services:
+  microservices:
+    image: ${DOCKER_REGISTRY}microservices
+    build:
+      context: .
+      dockerfile: MicroServices\Dockerfile
+
+  coreservice:
+    image: ${DOCKER_REGISTRY}coreservice
+    build:
+      context: .
+      dockerfile: CoreService\Dockerfile
+
+
+  netservice:
+    image: ${DOCKER_REGISTRY}netservice
+    build:
+      context: .\Services\NetService
+      dockerfile: Dockerfile
+
+
+  webapplication1:
+    image: ${DOCKER_REGISTRY}webapplication1
+    build:
+      context: .\Services\WebApplication1
+      dockerfile: Dockerfile
+

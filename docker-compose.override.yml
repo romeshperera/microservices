@@ -1,0 +1,28 @@
+version: '3.4'
+
+services:
+  microservices:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    ports:
+      - "80"
+
+  coreservice:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    ports:
+      - "80"
+
+  netservice:
+    ports:
+      - "80"
+  webapplication1:
+    ports:
+      - "80"
+networks:
+  default:
+    external:
+      name: nat
+
+
+

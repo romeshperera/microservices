@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <OutputPath>..\..\BIN\CoreWapper\</OutputPath>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <OutputPath>..\..\BIN\CoreWapper</OutputPath>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="DLLs\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="..\..\Dlls\Demo.dll" Link="DLLs\Demo.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+</Project>
