@@ -12,9 +12,9 @@ phases:
       - '& "C:\ProgramData\chocolatey\bin\NuGet.exe" restore $env:SOLUTION -PackagesDirectory $env:PACKAGE_DIRECTORY'
       - '& "C:\Program Files (x86)\Microsoft Visual Studio\2017\BuildTools\MSBuild\15.0\bin\MSBuild.exe" Services\CoreService\CoreService.csproj  /t:Rebuild /p:Configuration=Release /p:Platform=x64'
       - '& "C:\Program Files (x86)\Microsoft Visual Studio\2017\BuildTools\MSBuild\15.0\bin\MSBuild.exe" Services\NetService\NetService.csproj  /t:Rebuild /p:Configuration=Release /p:Platform=AnyCPU'
-	  - '"C:\Program Files (x86)\Microsoft Visual Studio\2017\BuildTools\MSBuild\15.0\bin\MSBuild.exe" Services\CoreService\CoreService.csproj  /t:Rebuild /p:Configuration=Release /p:Platform=x64'
-	  - '& MSBuild Services\CoreService\CoreService.csproj  /t:Rebuild /p:Configuration=Release /p:Platform=x64'
-	  - 'MSBuild Services\CoreService\CoreService.csproj  /t:Rebuild /p:Configuration=Release /p:Platform=x64'
+      - '"C:\Program Files (x86)\Microsoft Visual Studio\2017\BuildTools\MSBuild\15.0\bin\MSBuild.exe" Services\CoreService\CoreService.csproj  /t:Rebuild /p:Configuration=Release /p:Platform=x64'
+      - '& MSBuild Services\CoreService\CoreService.csproj  /t:Rebuild /p:Configuration=Release /p:Platform=x64'
+      - ' MSBuild Services\CoreService\CoreService.csproj  /t:Rebuild /p:Configuration=Release /p:Platform=x64'
 artifacts:
   files:
     - .\Services\NetService\bin\*
