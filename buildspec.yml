@@ -9,9 +9,8 @@ env:
 phases:
   install:
     commands:
-      - ENV NUGET_VERSION 4.7.0
       - RUN New-Item -Type Directory $Env:ProgramFiles\NuGet; `
-        Invoke-WebRequest -UseBasicParsing https://dist.nuget.org/win-x86-commandline/v$Env:NUGET_VERSION/nuget.exe -OutFile $Env:ProgramFiles\NuGet\nuget.exe
+        Invoke-WebRequest -UseBasicParsing https://dist.nuget.org/win-x86-commandline/v4.7.0/nuget.exe -OutFile $Env:ProgramFiles\NuGet\nuget.exe
 
   build:
     commands:
