@@ -9,7 +9,8 @@ env:
 phases:
   install:
     commands:
-      - Invoke-WebRequest -UseBasicParsing https://dist.nuget.org/win-x86-commandline/v4.7.0/nuget.exe -OutFile $Env:ProgramFiles\NuGet\nuget.exe
+      - Invoke-WebRequest -UseBasicParsing https://dist.nuget.org/win-x86-commandline/v4.7.0/nuget.exe -OutFile $rootPath\nuget.exe
+      - Set-Alias nuget $rootPath\nuget.exe -Scope Global -Verbose
   build:
     commands:
       #- '& "C:\ProgramData\chocolatey\bin\NuGet.exe" restore $env:SOLUTION -PackagesDirectory $env:PACKAGE_DIRECTORY'
