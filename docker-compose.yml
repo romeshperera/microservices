@@ -20,10 +20,3 @@ services:
       context: .\Services\NetService
       dockerfile: Dockerfile
 
-
-  webapplication1:
-    image: ${DOCKER_REGISTRY}webapplication1
-    build:
-      context: .\Services\WebApplication1
-      dockerfile: Dockerfile
-
